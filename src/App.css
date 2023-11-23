@@ -1,0 +1,18 @@
+.active a {
+    background: rgb(103 232 249 / var(--tw-bg-opacity));
+    color: #000;
+  }
+  .active {
+    border-left: 5px solid rgb(103 232 249 / var(--tw-bg-opacity));
+  }
+  
+th {
+  min-width: 170px;
+  color: rgb(103 232 249 / var(--tw-bg-opacity));
+  padding: 10px 10px;
+}
+ td{
+  background: #0f0f0f;
+  padding: 20px 10px;
+  border-bottom: 1px solid rgb(103 232 249 / var(--tw-bg-opacity));
+}
