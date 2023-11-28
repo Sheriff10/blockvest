@@ -1,20 +1,17 @@
 import React, { useState } from "react";
-import { FaBars, FaHome, FaSearch } from "react-icons/fa";
+import { FaBars, FaHome } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 export default function Menu({ children }) {
-   const dum = [1, 2, 3, 4, 5, 3, 3];
    const menuFunc = (icon, text, link) => {
       return { icon, text, link };
    };
 
    const menuArr = [
       menuFunc(<FaHome />, "Dashboard", "/user/dashboard"),
-      menuFunc(<FaHome />, "Student", "/admin/student"),
-      menuFunc(<FaHome />, "Create Student", "/admin/create/student"),
-      menuFunc(<FaHome />, "Classes", "/admin/classes"),
-      menuFunc(<FaHome />, "Create Classes", "/admin/classes/create"),
-      menuFunc(<FaHome />, "Announcement", "/admin/announcement"),
+      menuFunc(<FaHome />, "Balance", "/user/balance"),
+      menuFunc(<FaHome />, "Deposit", "/user/deposit"),
+      menuFunc(<FaHome />, "Withdraw", "/user/withdrawal"),
    ];
    const [show, setShow] = useState(true);
    return (
@@ -45,6 +42,7 @@ export default function Menu({ children }) {
                                        {" "}
                                        <a
                                           className={`d-flex gap-2 align-items-center  py-2 px-3 rounded-lg`}
+                                          href="/home"
                                        >
                                           {menu.icon} {menu.text}
                                        </a>

@@ -8,7 +8,7 @@ export default function Balance() {
             <div className="text-wrap">
                <span className="text-xs text-gray-400 font-bold">Balance</span>{" "}
                <br />
-               <span className="text-white text-5xl font-bold">$45.00</span>
+               <span className="text-white text-4xl font-bold">$45.00</span>
             </div>
             <div className="btn-wrap mt-4 flex gap-4">
                <div className="col">
