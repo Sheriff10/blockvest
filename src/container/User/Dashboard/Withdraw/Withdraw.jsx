@@ -15,13 +15,13 @@ export default function Withdraw() {
                <div className="wrap">
                   <div className="form-group mb-3">
                      <span>Amount</span>
-                     <input type="number" className="form-control" />
+                     <input type="number" className="form-control bg-gray-950 border-0 focus:bg-gray-950 text-gray-300 focus:text-white" />
                      <span className="text-xs text-gray-400">Minimum $10.00</span>
                   </div>
 
                   <div className="form-group mb-3">
                      <span>Address</span>
-                     <input type="text" className="form-control" />
+                     <input type="text" className="form-control bg-gray-950 border-0 focus:bg-gray-950 text-gray-300 focus:text-white" />
                   </div>
 
                   <div className="btn-wrap my-4">

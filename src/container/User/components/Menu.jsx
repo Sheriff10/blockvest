@@ -3,7 +3,6 @@ import { FaBars, FaHome } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Menu({ children }) {
-   const navi = useNavigate()
    const menuFunc = (icon, text, link) => {
       return { icon, text, link };
    };
@@ -15,7 +14,7 @@ export default function Menu({ children }) {
       menuFunc(<FaHome />, "Withdraw", "/user/withdrawal"),
       menuFunc(<FaHome />, "Invest", "/user/investment"),
    ];
-   const [show, setShow] = useState(true);
+   const [show, setShow] = useState(false);
    return (
       <div className="menu bg-grey">
          <div className="flex">
@@ -37,7 +36,7 @@ export default function Menu({ children }) {
                         <ul>
                            {menuArr.map((menu, index) => (
                               <li key={index} className="flex">
-                                 <NavLink to={menu.link} className="flex mb-4 p-0 w-full">
+                                 <NavLink to={menu.link} className="flex mb-4 p-0 w-full" onClick={() => setShow(!show)}>
                                     <li
                                        className={` text-gray-400 px-2 hover:bg-gray-800 hover:rounded-lg hover:text-primary w-full`}
                                     >

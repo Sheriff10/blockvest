@@ -32,7 +32,7 @@ export default function Option() {
                            </span>
                            <input
                               type="text"
-                              className="form-control"
+                              className="form-control bg-gray-950 border-0 focus:bg-gray-950 text-gray-300 focus:text-white"
                               placeholder="$ Enter Amount."
                            />
                         </div>

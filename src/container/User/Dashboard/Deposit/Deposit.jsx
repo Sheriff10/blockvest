@@ -14,7 +14,7 @@ export default function Deposit() {
                   <div className="card bg-gray-900 text-white p-5 rounded-lg mb-10">
                      <div className="form-group mb-3">
                         <div className="span text-sm">Currency</div>
-                        <select className="form-select">
+                        <select className="form-select bg-gray-950 border-0 focus:bg-gray-950 text-gray-300">
                            <option value="">Test Stuf</option>
                            <option value="">Test Stuf</option>
                            <option value="">Test Stuf</option>
@@ -22,7 +22,7 @@ export default function Deposit() {
                      </div>
                      <div className="form-group mb-3">
                         <div className="span text-sm">Amount</div>
-                        <input type="number" className="form-control" />
+                        <input type="number" className="form-control bg-gray-950 border-0 focus:bg-gray-950 text-gray-300 focus:text-white" />
                      </div>
                   </div>
 
