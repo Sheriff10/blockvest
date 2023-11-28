@@ -1,8 +1,10 @@
 import React from "react";
 import { FaWallet } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import Menu from "../../components/Menu";
 
 export default function Deposit() {
+    const navi = useNavigate()
    return (
       <Menu>
          <div className="container">
@@ -45,7 +47,7 @@ export default function Deposit() {
                      </div>
 
                      <div className="btn-wrap">
-                        <button className="btn bg-cyan-300 w-full">
+                        <button className="btn bg-cyan-300 w-full" onClick={() => navi('/user/deposit/address')}>
                            Continue
                         </button>
                      </div>

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { FaBars, FaHome } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Menu({ children }) {
+   const navi = useNavigate()
    const menuFunc = (icon, text, link) => {
       return { icon, text, link };
    };
@@ -12,6 +13,7 @@ export default function Menu({ children }) {
       menuFunc(<FaHome />, "Balance", "/user/balance"),
       menuFunc(<FaHome />, "Deposit", "/user/deposit"),
       menuFunc(<FaHome />, "Withdraw", "/user/withdrawal"),
+      menuFunc(<FaHome />, "Invest", "/user/investment"),
    ];
    const [show, setShow] = useState(true);
    return (
