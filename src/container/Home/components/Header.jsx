@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 export default function Header() {
    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,12 +21,6 @@ export default function Header() {
          >
             <div className="flex lg:flex-1">
                <a href="/#" className="-m-1.5 p-1.5">
-                  {/* <span className="sr-only">Your Company</span>
-                  <img
-                     className="h-8 w-auto"
-                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                     alt=""
-                  /> */}
                   <span className="text-white font-bold text-2xl">Block<span className="text-cyan-300">vest</span></span>
                </a>
             </div>
@@ -51,12 +46,12 @@ export default function Header() {
                ))}
             </div>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-               <a
-                  href="/#"
+               <Link
+                  to="/auth/signin"
                   className="text-sm font-semibold leading-6 text-gray-900 btn bg-cyan-300 "
                >
                   Log in <span aria-hidden="true">&rarr;</span>
-               </a>
+               </Link>
             </div>
          </nav>
 
@@ -98,12 +93,12 @@ export default function Header() {
                         ))}
                      </div>
                      <div className="py-6">
-                        <a
-                           href="/#"
+                        <Link
+                           to="/auth/signin"
                            className="-mx-3 btn bg-cyan-300  block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                         >
                            Log in
-                        </a>
+                        </Link>
                      </div>
                   </div>
                </div>

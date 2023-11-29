@@ -1,4 +1,3 @@
-
 import "./App.css";
 import Home from "./container/Home/Home";
 import { Route, Routes } from "react-router-dom";
@@ -9,12 +8,19 @@ import Withdraw from "./container/User/Dashboard/Withdraw/Withdraw";
 import Invest from "./container/User/Dashboard/Investment/Invest";
 import Option from "./container/User/Dashboard/Investment/Option/Option";
 import ViewAddress from "./container/User/Dashboard/Deposit/Address/ViewAddress";
+import Signin from "./container/Auth/Signin";
+import Signup from "./container/Auth/Signup";
 
 function App() {
+   window.api = "http://localhost:5000";
    return (
       <div className="App">
          <Routes>
             <Route path="/" element={<Home />} />
+
+            {/* Auth */}
+            <Route path="/auth/signin" element={<Signin />} />
+            <Route path="/auth/signup" element={<Signup />} />
 
             {/* User */}
             <Route path="/user/dashboard" element={<Dashboard />} />

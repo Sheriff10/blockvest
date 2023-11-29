@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "./Header";
 
 
@@ -39,15 +40,15 @@ export default function Intro() {
               fugiat veniam occaecat fugiat aliqua.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="/dol"
+              <Link
+                to="/auth/signup"
                 className="rounded-md bg-cyan-300 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Start Investing
-              </a>
-              <a href="/lk" className="text-sm font-semibold leading-6 border-1 rounded-md p-2 text-white  border-cyan-300">
+              </Link>
+              <Link to="/auth/signin" className="text-sm font-semibold leading-6 border-1 rounded-md p-2 text-white  border-cyan-300">
                 Login <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
