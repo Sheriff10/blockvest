@@ -1,28 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaWallet } from "react-icons/fa";
+import getHandler from "../../../utils/getHandler";
+import logout from "../../../utils/logout";
 import Balance from "../components/Balance";
 import Menu from "../components/Menu";
 
 export default function Dashboard() {
    const dum = [1, 2, 3];
+
+   const [stats, setStats] = useState({
+      balance: "0",
+      deposit: "0",
+      invested: "0",
+      withdrawal: "0",
+   });
+
+   useEffect(() => {
+      getStats();
+   }, []);
+
+   const getStats = async () => {
+      try {
+         const response = await getHandler("/user/dashboard");
+         console.log(response);
+         window.sessionStorage.setItem("balance", response.stats.balance)
+         setStats(response.stats);
+      } catch (error) {
+         console.log(error);
+         if (error) logout();
+      }
+   };
+
+   const cardFunc = (heading, value) => {
+      return { heading, value };
+   };
+   const cardArr = [
+      cardFunc("Balance", stats.balance),
+      cardFunc("Withdrawal", stats.withdrawal),
+      cardFunc("Invested", stats.invested),
+      cardFunc("Deposited", stats.deposit),
+   ];
    return (
       <Menu>
-        {/* Balance Display */}
-        <Balance />
+         {/* Balance Display */}
+         <Balance balance={stats.balance} />
 
-        {/* User Stats */}
+         {/* User Stats */}
          <div className="container">
             <div className="row my-5">
-               {dum.map((cards, index) => (
+               {cardArr.map((cards, index) => (
                   <div className="col-md-4" key={index}>
                      <div className="card rounded-lg my-2 p-4 bg-gray-900">
                         <div className="heading mb-3">
                            <span className="font-semibold text-lg text-white">
-                              Total Investment
+                              {cards.heading}
                            </span>
                         </div>
                         <div className="text-wrap text-cyan-400">
-                           <span className="text-3xl font-bold">$300.00</span>
+                           <span className="text-3xl font-bold">
+                              ${cards.value}
+                           </span>
                         </div>
                      </div>
                   </div>

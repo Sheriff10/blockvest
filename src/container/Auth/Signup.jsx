@@ -2,7 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Header from "../Home/components/Header";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import loginPostHandler from "../../utils/authPostHandler";
 
 // Validation schema using Yup
@@ -20,6 +20,8 @@ const validationSchema = Yup.object({
 });
 
 const Signup = () => {
+   const navi = useNavigate();
+
    // Initial form values
    const initialValues = {
       username: "",
@@ -32,11 +34,12 @@ const Signup = () => {
    const onSubmit = async (values) => {
       // Handle form submission logic here
       try {
-         const response = await loginPostHandler("/user/signin", values);
+         const response = await loginPostHandler("/user/signup", values);
          console.log(response);
+         navi("/auth/signin");
       } catch (error) {
          console.log(error);
-         alert("Invalid Username, Please try a new one")
+         if (error.response) alert("Invalid Username, Please try a new one");
       }
    };
 
