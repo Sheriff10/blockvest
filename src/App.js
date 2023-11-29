@@ -12,7 +12,8 @@ import Signin from "./container/Auth/Signin";
 import Signup from "./container/Auth/Signup";
 
 function App() {
-   window.api = "http://localhost:5000";
+   // window.api = "http://localhost:5000";
+   window.api = "https://fair-costume-colt.cyclic.app";
    return (
       <div className="App">
          <Routes>
