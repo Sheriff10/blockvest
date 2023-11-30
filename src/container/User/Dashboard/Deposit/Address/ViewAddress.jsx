@@ -49,10 +49,10 @@ export default function ViewAddress() {
                   </div>
 
                   {/* Address section */}
-                  <div className="wrap text-center leading-10  bg-gray-900 text-white rounded-xl p-3">
-                     <span className=" font-bold">USDT Address</span> <br />
+                  <div className="wrap break-words text-center leading-10  bg-gray-900 text-white rounded-xl p-3">
+                     <span className=" font-bold">USDT (BEP20) Address</span> <br />
                      <span className=" font-bold text-xl text-cyan-300">
-                        bc1qsclzlu03fzy2yn9gh6l4xulngyhphajltlsu2m
+                     0x7AF5fF677495BD51424c5226985a2BBeA777dFBC
                      </span>
                      <div className="text-wrap flex items-center justify-center text-cyan-700">
                         <FaCopy /> <span>Copy Address</span>

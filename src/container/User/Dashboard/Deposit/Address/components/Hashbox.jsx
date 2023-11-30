@@ -25,7 +25,7 @@ export default function Hashbox({ toggle, amount }) {
    return (
       <div className="container">
          <div className="fixed top-0 bottom-0 right-0 left-0 flex items-center justify-center backdrop-blur-lg">
-            <div className="col-lg-6 col-md-8">
+            <div className="col-lg-6 col-md-8 p-3">
                {/* Deposit Box  */}
                <div className="card bg-gray-900 text-white p-5 rounded-lg mb-10">
                   <div className="heading border-b-1 border-gray-500 mb-3 text-center">
