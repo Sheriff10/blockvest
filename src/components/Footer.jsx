@@ -35,8 +35,7 @@ export default function Footer() {
                   </div>
                   <div className="text-wrap mb-3">
                      <span>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Accusamus, qui? Lorem ipsum dolor sit amet.
+                     Embarking on a Journey of Empowerment, Guiding Futures through Thoughtful Investments and Unleashing Opportunities for Lasting Success.
                      </span>
                   </div>
                   <div className="social-con text-cyan-200 flex gap-3 text-lg">

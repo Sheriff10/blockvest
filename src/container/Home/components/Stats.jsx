@@ -6,7 +6,7 @@ const stats = [
   
   export default function Stats() {
     return (
-      <div className="bg-white py-24 sm:py-32">
+      <div className="bg-white py-24 sm:py-32" id="stats">
         <div className="heading mb-16 text-center">
             <span className="text-3xl sm:text-4xl font-semibold text-gray-900">Block<span className="text-cyan-300">vest</span> Stats</span>
         </div>

@@ -26,6 +26,8 @@ export default function Dashboard() {
          const response = await getHandler("/user/dashboard");
          console.log(response);
          window.sessionStorage.setItem("balance", response.stats.balance);
+         window.sessionStorage.setItem("username", response.stats.username);
+         window.sessionStorage.setItem("email", response.stats.email);
          setStats(response.stats);
       } catch (error) {
          console.log(error);

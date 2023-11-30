@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 export default function Header() {
    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
    const navigation = [
-      { name: "Product", href: "#" },
-      { name: "Features", href: "#" },
-      { name: "Marketplace", href: "#" },
-      { name: "Company", href: "#" },
+      { name: "Home", href: "/" },
+      { name: "Blockvest Stats", href: "#stats" },
+      { name: "Getting Started", href: "#start" },
+      { name: "Sigin up", href: "/auth/signup" },
    ];
 
    return (
