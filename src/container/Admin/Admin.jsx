@@ -14,19 +14,19 @@ const AdminDashboard = () => {
 
    const getDeposit = async () => {
       try {
-         const response = await getHandler("/admin/get-deposit");
+         const response = await getHandler("/admin/get-deposit", true);
          setDeposits(response);
          console.log(response);
       } catch (error) {
          console.log(error);
-         if (error.response.status === 401) return logout();
+        //  if (error.response.status === 401) return logout();
       }
    };
 
    const handleAction = async (_id, amount, status, username) => {
       try {
          const data = { _id, amount, status, username };
-         const response = await postHandler("/admin/update-deposit", data);
+         const response = await postHandler("/admin/update-deposit", data, true);
          getDeposit();
          console.log(response);
       } catch (error) {

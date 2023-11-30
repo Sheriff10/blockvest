@@ -1,9 +1,12 @@
 import axios from "axios";
 import logout from "./logout";
 
-const getHandler = async (query) => {
+const getHandler = async (query, isAdmin) => {
    const token = window.sessionStorage.getItem("user-auth-token");
-   if (!token) return logout();
+
+   if (!isAdmin) {
+      if (!token) return logout();
+   }
    const response = await axios.get(`${window.api}${query}`, {
       headers: {
          "user-auth-token": token,
