@@ -44,7 +44,7 @@ const Signin = () => {
                <div className="col-lg-5 p-3 rounded-xl bg-gray-900 text-white mx-auto  my-auto">
                   <div className="text-heading text-center  mb-3">
                      <span className="text-2xl font-medium">
-                        Login to your Blockvest Account
+                        Login to your Blockervest Account
                      </span>
                   </div>
                   <Formik
