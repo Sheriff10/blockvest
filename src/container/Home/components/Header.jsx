@@ -21,7 +21,7 @@ export default function Header() {
          >
             <div className="flex lg:flex-1">
                <a href="/#" className="-m-1.5 p-1.5">
-                  <span className="text-white font-bold text-2xl">Block<span className="text-cyan-300">vest</span></span>
+                  <span className="text-white font-bold text-2xl">Blocker<span className="text-cyan-300">vest</span></span>
                </a>
             </div>
             <div className="flex lg:hidden">
@@ -67,7 +67,7 @@ export default function Header() {
                <div className="flex items-center justify-between">
                   <a href="/#" className="-m-1.5 p-1.5">
                      <span className="sr-only">Your Company</span>
-                  <span className="text-gray-900 font-bold text-2xl">Block<span className="text-cyan-300">vest</span></span>
+                  <span className="text-gray-900 font-bold text-2xl">Blocker<span className="text-cyan-300">vest</span></span>
 
                   </a>
                   <button
