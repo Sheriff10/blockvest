@@ -10,6 +10,7 @@ import Option from "./container/User/Dashboard/Investment/Option/Option";
 import ViewAddress from "./container/User/Dashboard/Deposit/Address/ViewAddress";
 import Signin from "./container/Auth/Signin";
 import Signup from "./container/Auth/Signup";
+import AdminDashboard from "./container/Admin/Admin";
 
 function App() {
    // window.api = "http://localhost:5000";
@@ -31,6 +32,9 @@ function App() {
             <Route path="/user/withdrawal" element={<Withdraw />} />
             <Route path="/user/investment" element={<Invest />} />
             <Route path="/user/investment/option" element={<Option />} />
+
+            {/* Admin */}
+            <Route path="/dashboard/admin" element={<AdminDashboard />} />
          </Routes>
       </div>
    );
