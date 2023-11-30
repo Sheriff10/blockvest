@@ -4,23 +4,46 @@ import Menu from "../../components/Menu";
 
 export default function Invest() {
    const dum = [1, 2, 3];
-   const navi = useNavigate()
+   const navi = useNavigate();
+
+   const cardFunc = (title, ROI, min, max, img) => {
+      return { title, ROI, min, max, img };
+   };
+   const cardArr = [
+      cardFunc(
+         "Basic Plan",
+         21,
+         100,
+         999.99,
+         "https://cloudtradingx.com/static/assets/images/btc_icon.png"
+      ),
+      cardFunc(
+         "Primary Plan",
+         25,
+         1000,
+         4999.99,
+         "https://cloudtradingx.com/static/assets/images/invest-icons/eth_icon.png"
+      ),
+      cardFunc(
+         "Secondary Plan",
+         26,
+         5000,
+         "infinity",
+         "https://cloudtradingx.com/static/assets/images/invest-icons/bitcoin-cash-icon.png"
+      ),
+   ];
 
    return (
       <Menu>
          <div className="container">
             <div className="row py-16">
-               {dum.map((card, index) => (
+               {cardArr.map((card, index) => (
                   <div className="col-lg-4 col-md-6 mb-3" key={index}>
                      <div className="card rounded-lg p-3 bg-gray-900 my-3">
                         <div className="heading flex gap-3 items-center mb-3">
-                           <img
-                              src="https://cloudtradingx.com/static/assets/images/btc_icon.png"
-                              alt="BTC"
-                              className="w-[30px]"
-                           />
+                           <img src={card.img} alt="BTC" className="w-[30px]" />
                            <span className="text-white text-xl font-bold">
-                              Basic Plan
+                              {card.title}
                            </span>
                         </div>
 
@@ -31,7 +54,7 @@ export default function Invest() {
                               </span>{" "}
                               <br />
                               <span className="text-2xl font-bold text-green-400">
-                                 14.00%
+                                 {card.ROI}.00%
                               </span>
                            </div>
 
@@ -50,7 +73,7 @@ export default function Invest() {
                               </span>{" "}
                               <br />
                               <span className="text-xl font-bold ">
-                                 $300.00
+                                 ${card.min}.00
                               </span>
                            </div>
 
@@ -63,7 +86,14 @@ export default function Invest() {
                            </div>
                         </div>
                         <div className="btn-wrap">
-                           <button className="btn w-full bg-cyan-300" onClick={() => navi('/user/investment/option')}>
+                           <button
+                              className="btn w-full bg-cyan-300"
+                              onClick={() =>
+                                 navi(
+                                    `/user/investment/option?min=${card.min}&max=${card.max}&name=${card.title}&ROI=${card.ROI}&img=${card.img}`
+                                 )
+                              }
+                           >
                               Invest
                            </button>
                         </div>

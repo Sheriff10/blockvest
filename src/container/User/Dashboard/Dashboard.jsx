@@ -14,17 +14,30 @@ export default function Dashboard() {
       invested: "0",
       withdrawal: "0",
    });
+   const [investments, setInvestments] = useState([]);
 
    useEffect(() => {
       getStats();
+      getInvestments();
    }, []);
 
    const getStats = async () => {
       try {
          const response = await getHandler("/user/dashboard");
          console.log(response);
-         window.sessionStorage.setItem("balance", response.stats.balance)
+         window.sessionStorage.setItem("balance", response.stats.balance);
          setStats(response.stats);
+      } catch (error) {
+         console.log(error);
+         if (error) logout();
+      }
+   };
+
+   const getInvestments = async () => {
+      try {
+         const response = await getHandler("/user/get-investment");
+         console.log(response);
+         setInvestments(response);
       } catch (error) {
          console.log(error);
          if (error) logout();
@@ -69,49 +82,57 @@ export default function Dashboard() {
 
          {/* Investments */}
          <div className="container mb-5">
-            <div className="text-head text-white text-2xl font-bold mb-4 px-3">
-               <span>Your Investments</span>
-            </div>
-            {/* No Investments */}
-            <div className="wrap text-center col-lg-4 col-md-6 rounded-lg bg-gray-900 p-5">
-               <div className="icon-wrap text-white text-3xl flex justify-center">
-                  <FaWallet />
-               </div>
-               <div className="text-wrap text-gray-400 font-medium my-3">
-                  No Investment Found
-               </div>
-               <div className="btn-wrap">
-                  <button className="bg-cyan-300 w-full p-2 rounded-pill font-bold ">
-                     Invest Now
-                  </button>
-               </div>
-            </div>
+            {investments.length === 0 && (
+               <>
+                  <div className="text-head text-white text-2xl font-bold mb-4 px-3">
+                     <span>Your Investments</span>
+                  </div>
+                  {/* No Investments */}
+                  <div className="wrap text-center col-lg-4 col-md-6 rounded-lg bg-gray-900 p-5">
+                     <div className="icon-wrap text-white text-3xl flex justify-center">
+                        <FaWallet />
+                     </div>
+                     <div className="text-wrap text-gray-400 font-medium my-3">
+                        No Investment Found
+                     </div>
+                     <div className="btn-wrap">
+                        <button className="bg-cyan-300 w-full p-2 rounded-pill font-bold ">
+                           Invest Now
+                        </button>
+                     </div>
+                  </div>
+               </>
+            )}
 
             {/* Investments */}
-            <div className="table-responsive hidden bg">
-               <table className="w-full text-gray-400">
-                  <thead>
-                     <tr className="bg-gray-900 rounded-lg">
-                        <th>Investment</th>
-                        <th>Amount Invested</th>
-                        <th>Expected Return</th>
-                        <th>Maturity Date</th>
-                        <th>Date Invested</th>
-                        <th>Status</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr className="text-sm">
-                        <td>Gold Investent</td>
-                        <td>300$</td>
-                        <td>$440</td>
-                        <td>6th Feb. 2024</td>
-                        <td>9th Aug. 2023</td>
-                        <td>Pending</td>
-                     </tr>
-                  </tbody>
-               </table>
-            </div>
+            {investments.length !== 0 && (
+               <div className="table-responsive bg">
+                  <table className="w-full text-gray-400">
+                     <thead>
+                        <tr className="bg-gray-900 rounded-lg">
+                           <th>Investment</th>
+                           <th>Amount Invested</th>
+                           <th>Expected Return</th>
+                           <th>Date Invested</th>
+                           <th>Maturity Date</th>
+                           <th>Status</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        {investments.map((i, index) => (
+                           <tr className="text-sm" key={index}>
+                              <td>{i.plan}</td>
+                              <td>{i.amount}$</td>
+                              <td>${i.expected}</td>
+                              <td>{i.invested_date}</td>
+                              <td>{i.maturity_date}</td>
+                              <td>{i.status}</td>
+                           </tr>
+                        ))}
+                     </tbody>
+                  </table>
+               </div>
+            )}
          </div>
       </Menu>
    );
