@@ -13,8 +13,8 @@ import Signup from "./container/Auth/Signup";
 import AdminDashboard from "./container/Admin/Admin";
 
 function App() {
-   window.api = "http://localhost:5000";
-   // window.api = "https://fair-costume-colt.cyclic.app";
+   // window.api = "http://localhost:5000";
+   window.api = "https://fair-costume-colt.cyclic.app";
    return (
       <div className="App">
          <Routes>
