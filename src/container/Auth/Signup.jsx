@@ -52,7 +52,7 @@ const Signup = () => {
                <div className="col-lg-5 p-3 rounded-xl bg-gray-900 text-white mx-auto  my-auto">
                   <div className="text-heading text-center ">
                      <span className="text-2xl font-medium">
-                        Create a Blockvest Account
+                        Create a Blockervest Account
                      </span>
                   </div>
                   <Formik
