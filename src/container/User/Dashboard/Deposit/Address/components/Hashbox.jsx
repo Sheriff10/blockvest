@@ -27,7 +27,7 @@ export default function Hashbox({ toggle, amount }) {
          <div className="fixed top-0 bottom-0 right-0 left-0 flex items-center justify-center backdrop-blur-lg">
             <div className="col-lg-6 col-md-8 p-3">
                {/* Deposit Box  */}
-               <div className="card bg-gray-900 text-white p-5 rounded-lg mb-10">
+               <div className="card bg-gray-50 text-black p-5 rounded-lg mb-10">
                   <div className="heading border-b-1 border-gray-500 mb-3 text-center">
                      <div className="wrap text-right text-lg">
                         <FaTimesCircle onClick={toggle} />
@@ -44,14 +44,14 @@ export default function Hashbox({ toggle, amount }) {
                         <input
                            type="file"
                            name="IMG"
-                           className="form-control bg-gray-950 border-0 focus:bg-gray-950 text-gray-300 focus:text-white"
+                           className="form-control bg-gray-200 border-0 focus:bg-gray-200 text-gray-900 focus:text-black"
                         />
                      </div>
                      <div className="form-group mb-10">
                         <div className="span text-sm mb-2">Paste TxnHash</div>
                         <input
                            type="text"
-                           className="form-control bg-gray-950 border-0 focus:bg-gray-950 text-gray-300 focus:text-white"
+                           className="form-control bg-gray-200 border-0 focus:bg-gray-200 text-gray-900 focus:text-black"
                            value={hash}
                            onChange={(e) => setHash(e.target.value)}
                         />
@@ -59,7 +59,7 @@ export default function Hashbox({ toggle, amount }) {
 
                      <div className="btn-wrap">
                         <button
-                           className="btn bg-cyan-300 w-full"
+                           className="btn bg-pri w-full"
                            // onClick={() => navi("/user/deposit/address")}
                         >
                            Continue

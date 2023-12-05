@@ -45,13 +45,13 @@ const Signup = () => {
 
    return (
       <>
-         <div className="bg-gray-950 min-h-[100vh]">
+         <div className="bg-white min-h-[100vh]">
             <Header />
 
             <div className="container py-32">
-               <div className="col-lg-5 p-3 rounded-xl bg-gray-900 text-white mx-auto  my-auto">
-                  <div className="text-heading text-center ">
-                     <span className="text-2xl font-medium">
+               <div className="col-lg-5 p-3 rounded-xl bg-white shadow text-black mx-auto  my-auto">
+                  <div className="text-heading text-center mb-4 ">
+                     <span className="text-2xl font-bold">
                         Create a Blockvest Account
                      </span>
                   </div>
@@ -64,7 +64,7 @@ const Signup = () => {
                         <div className="form-group mb-3">
                            <label
                               htmlFor="name"
-                              className="text-gray-300 font-bold"
+                              className="text-gray-900 text-sm font-bold"
                            >
                               Username:
                            </label>
@@ -72,7 +72,7 @@ const Signup = () => {
                               type="text"
                               id="username"
                               name="username"
-                              className="form-control focus:text-white text-gray-400 focus:bg-gray-950 bg-gray-950 border-0"
+                              className="form-control focus:text-black text-gray-900 focus:bg-gray-50 bg-gray-200 border-0"
                            />
                            <ErrorMessage
                               name="username"
@@ -84,7 +84,7 @@ const Signup = () => {
                         <div className="form-group mb-3">
                            <label
                               htmlFor="name"
-                              className="text-gray-300 font-bold"
+                              className="text-gray-900 text-sm font-bold"
                            >
                               Email:
                            </label>
@@ -92,34 +92,10 @@ const Signup = () => {
                               type="email"
                               id="email"
                               name="email"
-                              className="form-control focus:text-white text-gray-400 focus:bg-gray-950 bg-gray-950 border-0"
+                              className="form-control focus:text-black text-gray-900 focus:bg-gray-50 bg-gray-200 border-0"
                            />
                            <ErrorMessage
                               name="email"
-                              component="div"
-                              className="text-xs text-red-600"
-                           />
-                        </div>
-
-                        <div className="form-group mb-3">
-                           <label
-                              htmlFor="name"
-                              className="text-gray-300 font-bold"
-                           >
-                              Country:
-                           </label>
-                           <Field
-                              as="select"
-                              id="country"
-                              name="country"
-                              className="form-select focus:text-white text-gray-400 focus:bg-gray-950 bg-gray-950 border-0"
-                           >
-                              <option value="" label="Select Country" />
-                              <option value="Nigeria" label="Nigeria" />
-                              <option value="USA" label="USA" />
-                           </Field>
-                           <ErrorMessage
-                              name="country"
                               component="div"
                               className="text-xs text-red-600"
                            />
@@ -129,14 +105,14 @@ const Signup = () => {
                         <div className="form-group mb-3">
                            <label
                               htmlFor="name"
-                              className="text-gray-300 font-bold"
+                              className="text-gray-900 text-sm font-bold"
                            >
                               Passsword:
                            </label>
                            <Field
                               type="password"
                               name="password"
-                              className="form-control focus:text-white text-gray-400 focus:bg-gray-950 bg-gray-950 border-0"
+                              className="form-control focus:text-black text-gray-900 focus:bg-gray-50 bg-gray-200 border-0"
                            />
                            <ErrorMessage
                               name="password"
@@ -148,7 +124,7 @@ const Signup = () => {
                         <div>
                            <button
                               type="submit"
-                              className="btn bg-cyan-300 w-full"
+                              className="btn bg-pri text-white w-full"
                            >
                               Submit
                            </button>
@@ -159,7 +135,7 @@ const Signup = () => {
                   <div className="cap my-3 font-medium">
                      <span>
                         Already have an account?{" "}
-                        <Link to={"/auth/signin"} className="text-cyan-300">
+                        <Link to={"/auth/signin"} className="text-pri">
                            Signin
                         </Link>{" "}
                      </span>

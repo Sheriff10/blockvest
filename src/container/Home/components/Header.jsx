@@ -21,7 +21,7 @@ export default function Header() {
          >
             <div className="flex lg:flex-1">
                <a href="/#" className="-m-1.5 p-1.5">
-                  <span className="text-white font-bold text-2xl">Block<span className="text-cyan-300">vest</span></span>
+                  <span className="text-white font-bold text-2xl">Block<span className="text-pri">vest</span></span>
                </a>
             </div>
             <div className="flex lg:hidden">
@@ -48,7 +48,7 @@ export default function Header() {
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                <Link
                   to="/auth/signin"
-                  className="text-sm font-semibold leading-6 text-gray-900 btn bg-cyan-300 "
+                  className="text-sm font-semibold leading-6 btn bg-pri text-white "
                >
                   Log in <span aria-hidden="true">&rarr;</span>
                </Link>
@@ -67,12 +67,12 @@ export default function Header() {
                <div className="flex items-center justify-between">
                   <a href="/#" className="-m-1.5 p-1.5">
                      <span className="sr-only">Your Company</span>
-                  <span className="text-gray-900 font-bold text-2xl">Block<span className="text-cyan-300">vest</span></span>
+                  <span className="text-gray-900 font-bold text-2xl">Block<span className="text-pri">vest</span></span>
 
                   </a>
                   <button
                      type="button"
-                     className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                     className="-m-2.5 rounded-md p-2.5 text-gray-500"
                      onClick={() => setMobileMenuOpen(false)}
                   >
                      <span className="sr-only">Close menu</span>
@@ -95,7 +95,7 @@ export default function Header() {
                      <div className="py-6">
                         <Link
                            to="/auth/signin"
-                           className="-mx-3 btn bg-cyan-300  block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                           className="-mx-3 btn bg-pri text-white  block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 hover:bg-gray-50"
                         >
                            Log in
                         </Link>
