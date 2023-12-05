@@ -29,9 +29,9 @@ export default function Withdraw() {
    return (
       <Menu>
          <div className="container py-16">
-            <div className="col-lg-4 col-md-6 p-3 rounded-xl mx-auto bg-gray-900 text-white">
-               <div className="heading mb-4 border-b-2 border-gray-700 py-2">
-                  <span className="text-sm text-gray-400">Spot Balance</span>{" "}
+            <div className="col-lg-4 col-md-6 p-3 rounded-xl mx-auto border-gray-500 border-2 text-black">
+               <div className="heading mb-4 border-b-2 border-gray-400 py-2">
+                  <span className="text-sm text-gray-900">Spot Balance</span>{" "}
                   <br />
                   <span className="text-xl font-bold">${balance}.00</span>
                </div>
@@ -43,7 +43,7 @@ export default function Withdraw() {
                         <span>Amount</span>
                         <input
                            type="number"
-                           className="form-control bg-gray-950 border-0 focus:bg-gray-950 text-gray-300 focus:text-white"
+                           className="form-control bg-gray-200 border-0 focus:bg-gray-50 text-gray-900 focus:text-black"
                            value={amount}
                            onChange={(e) => setAmount(e.target.value)}
                            min="10"
@@ -58,7 +58,7 @@ export default function Withdraw() {
                         <span>Address</span>
                         <input
                            type="text"
-                           className="form-control bg-gray-950 border-0 focus:bg-gray-950 text-gray-300 focus:text-white"
+                           className="form-control bg-gray-200 border-0 focus:bg-gray-50 text-gray-900 focus:text-black"
                            value={address}
                            onChange={(e) => setAddress(e.target.value)}
                            required
@@ -66,7 +66,7 @@ export default function Withdraw() {
                      </div>
 
                      <div className="btn-wrap my-4">
-                        <button className="btn bg-cyan-300 w-full">
+                        <button className="btn bg-pri text-white w-full">
                            Withdraw
                         </button>
                      </div>

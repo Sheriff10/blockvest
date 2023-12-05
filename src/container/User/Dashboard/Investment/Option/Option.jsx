@@ -110,7 +110,7 @@ export default function Option() {
                         Investment Summary
                      </span>
                   </div>
-                  <div className="card p-3 bg-gray-900 leading-9">
+                  {/* <div className="card p-3 bg-gray-900 leading-9">
                      {dum.map((i, index) => (
                         <div
                            className="text-wrap flex justify-between text-bold"
@@ -122,7 +122,7 @@ export default function Option() {
                            <span className="text-gray-400">2023-11-28</span>
                         </div>
                      ))}
-                  </div>
+                  </div> */}
                </div>
             </div>
          </div>

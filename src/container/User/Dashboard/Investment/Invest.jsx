@@ -39,17 +39,17 @@ export default function Invest() {
             <div className="row py-16">
                {cardArr.map((card, index) => (
                   <div className="col-lg-4 col-md-6 mb-3" key={index}>
-                     <div className="card rounded-lg p-3 bg-gray-900 my-3">
+                     <div className="card rounded-lg p-3 bg-gray-200 shadow-sm my-3">
                         <div className="heading flex gap-3 items-center mb-3">
                            <img src={card.img} alt="BTC" className="w-[30px]" />
-                           <span className="text-white text-xl font-bold">
+                           <span className="text-black text-xl font-bold">
                               {card.title}
                            </span>
                         </div>
 
                         <div className="wrap flex justify-between">
-                           <div className="text-wrap text-white">
-                              <span className="text-xs text-gray-400">
+                           <div className="text-wrap text-black">
+                              <span className="text-xs text-gray-900">
                                  Profitability returns
                               </span>{" "}
                               <br />
@@ -58,8 +58,8 @@ export default function Invest() {
                               </span>
                            </div>
 
-                           <div className="text-wrap text-white">
-                              <span className="text-xs text-gray-400">
+                           <div className="text-wrap text-black">
+                              <span className="text-xs text-gray-900">
                                  Duration
                               </span>{" "}
                               <br />
@@ -67,8 +67,8 @@ export default function Invest() {
                            </div>
                         </div>
                         <div className="wrap flex justify-between my-4">
-                           <div className="text-wrap text-white">
-                              <span className="text-xs text-gray-400">
+                           <div className="text-wrap text-black">
+                              <span className="text-xs text-gray-900">
                                  Minimum Amount
                               </span>{" "}
                               <br />
@@ -77,8 +77,8 @@ export default function Invest() {
                               </span>
                            </div>
 
-                           <div className="text-wrap text-white">
-                              <span className="text-xs text-gray-400">
+                           <div className="text-wrap text-black">
+                              <span className="text-xs text-gray-900">
                                  Referral Bonus
                               </span>{" "}
                               <br />
@@ -87,7 +87,7 @@ export default function Invest() {
                         </div>
                         <div className="btn-wrap">
                            <button
-                              className="btn w-full bg-cyan-300"
+                              className="btn w-full bg-pri text-white"
                               onClick={() =>
                                  navi(
                                     `/user/investment/option?min=${card.min}&max=${card.max}&name=${card.title}&ROI=${card.ROI}&img=${card.img}`

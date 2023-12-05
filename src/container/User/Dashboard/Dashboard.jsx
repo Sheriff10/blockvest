@@ -58,20 +58,22 @@ export default function Dashboard() {
    return (
       <Menu>
          {/* Balance Display */}
-         <Balance balance={stats.balance} />
+         <div className="container">
+            <Balance balance={stats.balance} />
+         </div>
 
          {/* User Stats */}
          <div className="container">
             <div className="row my-5">
                {cardArr.map((cards, index) => (
-                  <div className="col-md-4" key={index}>
-                     <div className="card rounded-lg my-2 p-4 bg-gray-900">
+                  <div className="col-md-4 col-6" key={index}>
+                     <div className="card rounded-lg my-2 p-4 bg-gray-50">
                         <div className="heading mb-3">
-                           <span className="font-semibold text-lg text-white">
+                           <span className="font-semibold text-lg text-gray-900">
                               {cards.heading}
                            </span>
                         </div>
-                        <div className="text-wrap text-cyan-400">
+                        <div className="text-wrap text-pri">
                            <span className="text-3xl font-bold">
                               ${cards.value}
                            </span>
@@ -86,11 +88,11 @@ export default function Dashboard() {
          <div className="container mb-5">
             {investments.length === 0 && (
                <>
-                  <div className="text-head text-white text-2xl font-bold mb-4 px-3">
+                  <div className="text-head  text-2xl font-bold mb-4 px-3">
                      <span>Your Investments</span>
                   </div>
                   {/* No Investments */}
-                  <div className="wrap text-center col-lg-4 col-md-6 rounded-lg bg-gray-900 p-5">
+                  <div className="wrap text-center col-lg-4 col-md-6 rounded-lg border-gray-300 border-2 p-5">
                      <div className="icon-wrap text-white text-3xl flex justify-center">
                         <FaWallet />
                      </div>
@@ -98,7 +100,7 @@ export default function Dashboard() {
                         No Investment Found
                      </div>
                      <div className="btn-wrap">
-                        <button className="bg-cyan-300 w-full p-2 rounded-pill font-bold ">
+                        <button className="bg-pri w-full p-2 rounded-pill font-bold ">
                            Invest Now
                         </button>
                      </div>
@@ -111,7 +113,7 @@ export default function Dashboard() {
                <div className="table-responsive bg">
                   <table className="w-full text-gray-400">
                      <thead>
-                        <tr className="bg-gray-900 rounded-lg">
+                        <tr className="bg-gray-200 rounded-lg">
                            <th>Investment</th>
                            <th>Amount Invested</th>
                            <th>Expected Return</th>

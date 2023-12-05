@@ -36,10 +36,10 @@ export default function Deposit() {
             <div className="row py-16">
                <div className="col-md-6">
                   {/* Deposit Box  */}
-                  <div className="card bg-gray-900 text-white p-5 rounded-lg mb-10">
+                  <div className="card bg-gray-300 text-gray-900 p-3 py-4 rounded-lg mb-10">
                      <div className="form-group mb-3">
                         <div className="span text-sm">Currency</div>
-                        <select className="form-select bg-gray-950 border-0 focus:bg-gray-950 text-gray-300">
+                        <select className="form-select bg-gray-50 border-0 focus:bg-gray-50 text-gray-900">
                            <option value="USD">USD</option>
                         </select>
                      </div>
@@ -47,7 +47,7 @@ export default function Deposit() {
                         <div className="span text-sm">Amount</div>
                         <input
                            type="number"
-                           className="form-control bg-gray-950 border-0 focus:bg-gray-950 text-gray-300 focus:text-white"
+                           className="form-control bg-gray-50 border-0 focus:bg-gray-50 text-gray-900 focus:text-black"
                            value={amount}
                            onChange={(e) => setAmount(e.target.value)}
                         />
@@ -55,7 +55,7 @@ export default function Deposit() {
                   </div>
 
                   {/* Crypto Box  */}
-                  <div className="card bg-gray-900 text-white p-5 rounded-lg mb-10">
+                  <div className="card bg-gray-300 text-gray-900 p-3 py-4 rounded-lg mb-10">
                      <div className="heading">
                         <span>Pay with</span> <br />
                         <small className="text-xs text-gray-400">
@@ -76,7 +76,7 @@ export default function Deposit() {
 
                      <div className="btn-wrap">
                         <button
-                           className="btn bg-cyan-300 w-full"
+                           className="btn bg-pri w-full text-white"
                            disabled={btn}
                            onClick={() =>
                               navi(`/user/deposit/address?amount=${amount}`)
@@ -97,7 +97,7 @@ export default function Deposit() {
 
                      {/* No Deposits */}
                      {deposits.length === 0 && (
-                        <div className="wrap text-center rounded-lg bg-gray-900 p-5 mb-5">
+                        <div className="wrap text-center rounded-lg bg-gray-300 p-5 mb-5">
                            <div className="icon-wrap text-white text-3xl flex justify-center">
                               <FaWallet />
                            </div>
@@ -116,7 +116,7 @@ export default function Deposit() {
                         <div className="table-responsive bg">
                            <table className="w-full text-gray-400">
                               <thead>
-                                 <tr className="bg-gray-900 rounded-lg">
+                                 <tr className="bg-gray-300 rounded-lg">
                                     <th>Amount</th>
                                     <th>Date</th>
                                     <th>Status</th>
