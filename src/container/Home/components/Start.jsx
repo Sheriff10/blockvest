@@ -32,7 +32,7 @@ export default function Start() {
             <div className="heading text-center px-4 leading-8">
                <span className="font-semibold sm:text-4xl text-3xl text-white">
                   <span className="text-white font-bold">
-                     Block<span className="text-cyan-300">vest</span>
+                     Block<span className="text-pri">vest</span>
                   </span>{" "}
                   | Get started
                </span>{" "}
@@ -52,12 +52,12 @@ export default function Start() {
                         key={index}
                      >
                         <div className="icon-wrap flex">
-                           <span className="bg-cyan-300 rounded-full p-3 shadow">
+                           <span className="bg-pri text-white rounded-full p-3 shadow">
                               {card.icon}
                            </span>
                         </div>
                         <div className="text-wrap">
-                           <span className="text-lg font-bold">
+                           <span className="text-lg font-bold text-pri">
                               {card.title}
                            </span>{" "}
                            <br />

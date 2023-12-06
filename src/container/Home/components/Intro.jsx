@@ -3,7 +3,7 @@ import Header from "./Header";
 
 export default function Intro() {
    return (
-      <div className="bg-gray-900 text-gray-300">
+      <div className="bg-gray-50 text-gray-900">
          <Header />
 
          <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -21,11 +21,11 @@ export default function Intro() {
             </div>
             <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                  <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-300 ring-1 ring-gray-300/10 hover:ring-gray-900/20">
+                  <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-900 ring-1 ring-gray-500 hover:ring-gray-900/20">
                      Earn over 20% ROI .{" "}
                      <Link
                         to="/auth/signin"
-                        className="font-semibold text-cyan-300"
+                        className="font-semibold text-pri"
                      >
                         <span className="absolute inset-0" aria-hidden="true" />
                         Read more <span aria-hidden="true">&rarr;</span>
@@ -33,7 +33,7 @@ export default function Intro() {
                   </div>
                </div>
                <div className="text-center">
-                  <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                      Empowering Futures, One Investment at a Time
                   </h1>
                   <p className="mt-6 text-lg leading-8 text-gray-500">
@@ -44,13 +44,13 @@ export default function Intro() {
                   <div className="mt-10 flex items-center justify-center gap-x-6">
                      <Link
                         to="/auth/signup"
-                        className="rounded-md bg-cyan-300 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        className="rounded-md bg-pri px-3.5 py-2.5 text-sm font-semibold text-gray-50 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                      >
                         Start Investing
                      </Link>
                      <Link
                         to="/auth/signin"
-                        className="text-sm font-semibold leading-6 border-1 rounded-md p-2 text-white  border-cyan-300"
+                        className="text-sm font-semibold leading-6 border-1 rounded-md p-2 text-gray-900  border-pri"
                      >
                         Login <span aria-hidden="true">→</span>
                      </Link>
