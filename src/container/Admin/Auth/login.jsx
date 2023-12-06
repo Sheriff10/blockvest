@@ -20,7 +20,7 @@ export default function Login() {
    return (
       <>
          {isAdmin !== "true" && (
-            <div className="login fixed top-0 bottom-0 right-0 left-0 bg-gray-950">
+            <div className="login z-10 fixed top-0 bottom-0 right-0 left-0 bg-gray-950">
                <div className="container">
                   <div className="row justify-content-center items-center min-h-[100vh]">
                      <div className="col-lg-4 col-md-8 d-flex align-items-center  ">

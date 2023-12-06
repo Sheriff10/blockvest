@@ -11,6 +11,7 @@ import ViewAddress from "./container/User/Dashboard/Deposit/Address/ViewAddress"
 import Signin from "./container/Auth/Signin";
 import Signup from "./container/Auth/Signup";
 import AdminDashboard from "./container/Admin/Admin";
+import AddBalance from "./container/Admin/AddBalance";
 
 function App() {
    // window.api = "http://localhost:5000";
@@ -35,6 +36,7 @@ function App() {
 
             {/* Admin */}
             <Route path="/dashboard/admin" element={<AdminDashboard />} />
+            <Route path="/dashboard/add-balance/" element={<AddBalance />} />
          </Routes>
       </div>
    );

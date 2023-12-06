@@ -16,3 +16,6 @@ th {
   padding: 20px 10px;
   border-bottom: 1px solid rgb(103 232 249 / var(--tw-bg-opacity));
 }
+.btn.bg-pri:hover {
+  background: #2e37ba;
+}
