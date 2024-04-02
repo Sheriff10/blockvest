@@ -32,7 +32,7 @@ export default function Start() {
             <div className="heading text-center px-4 leading-8">
                <span className="font-semibold sm:text-4xl text-3xl text-white">
                   <span className="text-white font-bold">
-                     Block<span className="text-pri">vest</span>
+                     Wealthify <span className="text-pri">Asset</span>
                   </span>{" "}
                   | Get started
                </span>{" "}

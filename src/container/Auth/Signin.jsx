@@ -45,7 +45,7 @@ const Signin = () => {
                <div className="col-lg-5 p-3 rounded-xl bg-white shadow text-black mx-auto  my-auto">
                   <div className="text-heading text-center  mb-3">
                      <span className="text-2xl font-bold mb-3">
-                        Login to your Blockvest Account
+                        Login to your Wealthify Asset Account
                      </span>
                   </div>
                   <Formik
