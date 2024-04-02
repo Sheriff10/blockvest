@@ -1,9 +1,11 @@
 // Dashboard.js
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import getHandler from "../../utils/getHandler";
 import logout from "../../utils/logout";
 import postHandler from "../../utils/postHandler";
 import Login from "./Auth/login";
+import AdminHeader from "./components/AdminHeader";
 
 const AdminDashboard = () => {
    const [deposits, setDeposits] = useState([]);
@@ -34,31 +36,17 @@ const AdminDashboard = () => {
       }
    };
    return (
-      <div className="bg-gray-950 min-h-[100vh]">
-        <Login />
+      <div className="bg-gray-50 min-h-[100vh]">
          {" "}
          <br />
          <br />
          <div className="container">
-            <nav className=" bg-gray-900 p-3">
-               <ul className="flex">
-                  <li className="mr-6">
-                     <a href="#" className="text-blue-500 hover:text-blue-800">
-                        Link 1
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" className="text-blue-500 hover:text-blue-800">
-                        Link 2
-                     </a>
-                  </li>
-               </ul>
-            </nav>
+            <AdminHeader />
 
             <div className="table-responsive shadow-md rounded my-6">
                <table className="min-w-max w-full table-auto">
                   <thead>
-                     <tr className="bg-gray-900 text-gray-300 uppercase text-sm leading-normal">
+                     <tr className="bg-gray-200 text-gray-300 uppercase text-sm leading-normal">
                         <th className="py-3 px-6 text-left">User</th>
                         <th className="py-3 px-6 text-left">Amount</th>
                         <th className="py-3 px-6 text-left">Date</th>

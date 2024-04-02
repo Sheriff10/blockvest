@@ -28,6 +28,7 @@ const Signin = () => {
       // Handle form submission logic here
       try {
          const response = await loginPostHandler("/user/signin", values);
+         console.log(response)
          navi("/user/dashboard");
       } catch (error) {
          console.log(error);
@@ -37,14 +38,14 @@ const Signin = () => {
 
    return (
       <>
-         <div className="bg-gray-950 min-h-[100vh]">
+         <div className="bg-gray-50 min-h-[100vh]">
             <Header />
 
             <div className="container py-32">
-               <div className="col-lg-5 p-3 rounded-xl bg-gray-900 text-white mx-auto  my-auto">
+               <div className="col-lg-5 p-3 rounded-xl bg-white shadow text-black mx-auto  my-auto">
                   <div className="text-heading text-center  mb-3">
-                     <span className="text-2xl font-medium">
-                        Login to your Blockervest Account
+                     <span className="text-2xl font-bold mb-3">
+                        Login to your Wealthify Asset Account
                      </span>
                   </div>
                   <Formik
@@ -57,15 +58,15 @@ const Signin = () => {
                         <div className="form-group mb-3">
                            <label
                               htmlFor="name"
-                              className="text-gray-300 font-bold"
+                              className="text-gray-900 text-sm font-bold"
                            >
-                              Username:
+                              Username
                            </label>
                            <Field
                               type="text"
                               id="username"
                               name="username"
-                              className="form-control focus:text-white text-gray-400 focus:bg-gray-950 bg-gray-950 border-0"
+                              className="form-control focus:text-black text-gray-900 focus:bg-gray-200 bg-gray-200 border-0"
                            />
                            <ErrorMessage
                               name="username"
@@ -78,14 +79,14 @@ const Signin = () => {
                         <div className="form-group mb-3">
                            <label
                               htmlFor="name"
-                              className="text-gray-300 font-bold"
+                              className="text-gray-900 text-sm font-bold"
                            >
-                              Passsword:
+                              Passsword
                            </label>
                            <Field
                               type="password"
                               name="password"
-                              className="form-control focus:text-white text-gray-400 focus:bg-gray-950 bg-gray-950 border-0"
+                              className="form-control  focus:text-black text-gray-900 focus:bg-gray-200 bg-gray-200 border-0"
                            />
                            <ErrorMessage
                               name="password"
@@ -98,7 +99,7 @@ const Signin = () => {
                         <div>
                            <button
                               type="submit"
-                              className="btn bg-cyan-300 w-full"
+                              className="btn bg-pri text-white w-full"
                            >
                               Submit
                            </button>
@@ -109,7 +110,7 @@ const Signin = () => {
                   <div className="cap my-3 font-medium">
                      <span>
                         Don't have an account?{" "}
-                        <Link to={"/auth/signup"} className="text-cyan-300">
+                        <Link to={"/auth/signup"} className="text-pri">
                            Signup
                         </Link>{" "}
                      </span>

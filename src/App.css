@@ -1,18 +1,21 @@
 .active a {
-    background: rgb(103 232 249 / var(--tw-bg-opacity));
-    color: #000;
+    background: #3741db;
+    color: #fff;
   }
   .active {
-    border-left: 5px solid rgb(103 232 249 / var(--tw-bg-opacity));
+    border-left: 5px solid #3741db;
   }
   
 th {
   min-width: 170px;
-  color: rgb(103 232 249 / var(--tw-bg-opacity));
+  color: #000;
   padding: 10px 10px;
 }
  td{
-  background: #0f0f0f;
+  background: #3741db;
   padding: 20px 10px;
   border-bottom: 1px solid rgb(103 232 249 / var(--tw-bg-opacity));
+}
+.btn.bg-pri:hover {
+  background: #2e37ba;
 }

@@ -8,7 +8,7 @@ const stats = [
     return (
       <div className="bg-white py-24 sm:py-32" id="stats">
         <div className="heading mb-16 text-center">
-            <span className="text-3xl sm:text-4xl font-semibold text-gray-900">Block<span className="text-cyan-300">vest</span> Stats</span>
+            <span className="text-3xl sm:text-4xl font-semibold text-gray-900">Wealthify<span className="text-pri">Asset</span> Stats</span>
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">

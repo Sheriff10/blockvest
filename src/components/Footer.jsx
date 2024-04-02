@@ -8,7 +8,7 @@ export default function Footer() {
          body: [
             { text: "About Us" },
             { text: "What we do" },
-            { text: "support@blockvest.com" },
+            { text: "support@wealthifyasset.com" },
          ],
       },
       {
@@ -26,19 +26,19 @@ export default function Footer() {
    ];
 
    return (
-      <div className="footer bg-gray-950 text-gray-400 py-16">
+      <div className="footer bg-gray-50 text-gray-900 py-16">
          <div className="container">
             <div className="row border-bottom border-slate-600 py-4">
                <div className="col-md-4 mb-5">
                   <div className="logo-com mb-4">
-                     <span className="text-2xl text-white font-bold">Block<span className="text-cyan-300">vest</span></span>
+                     <span className="text-2xl text-black font-bold">Block<span className="text-pri">vest</span></span>
                   </div>
                   <div className="text-wrap mb-3">
                      <span>
                      Embarking on a Journey of Empowerment, Guiding Futures through Thoughtful Investments and Unleashing Opportunities for Lasting Success.
                      </span>
                   </div>
-                  <div className="social-con text-cyan-200 flex gap-3 text-lg">
+                  <div className="social-con text-pri flex gap-3 text-lg">
                      <FaFacebook /> <FaTwitter /> <FaInstagram />
                   </div>
                </div>
@@ -47,7 +47,7 @@ export default function Footer() {
                      {footerData.map((i, index) => (
                         <div className="col-lg-4 col-6 mb-4" key={index}>
                            <div className="heading mb-3">
-                              <span className="text-white font-medium">{i.header}</span>
+                              <span className="text-black font-medium">{i.header}</span>
                            </div>
                            <div className="body leading-9">
                               <ul>
