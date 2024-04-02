@@ -8,7 +8,7 @@ export default function Footer() {
          body: [
             { text: "About Us" },
             { text: "What we do" },
-            { text: "support@blockvest.com" },
+            { text: "support@wealthifyasset.com" },
          ],
       },
       {

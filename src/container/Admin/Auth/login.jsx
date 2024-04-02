@@ -27,7 +27,7 @@ export default function Login() {
                         <div className="wrap  p-5 mx-auto bg-white">
                            <div className="head">
                               <span className="fs-4 d-flex align-items-center gap-2">
-                                 <FaLock /> Blockvest Admin Login
+                                 <FaLock /> Wealthify Admin Login
                               </span>
                            </div>
                            <div className="form-group mt-4">

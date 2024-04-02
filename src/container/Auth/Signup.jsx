@@ -52,7 +52,7 @@ const Signup = () => {
                <div className="col-lg-5 p-3 rounded-xl bg-white shadow text-black mx-auto  my-auto">
                   <div className="text-heading text-center mb-4 ">
                      <span className="text-2xl font-bold">
-                        Create a Blockvest Account
+                        Create a Wealthify Asset Account
                      </span>
                   </div>
                   <Formik
